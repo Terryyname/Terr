@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastgele Kullanıcı Adı Üretici</title>
+</head>
+<body>
+    <h1>Rastgele Kullanıcı Adı Üretici</h1>
+    <button onclick="generateUsername()">Üret</button>
+    <p id="username"></p>
+
+    <script>
+        function generateUsername() {
+            const adjectives = ['Hızlı', 'Yavaş', 'Akıllı', 'Cesur', 'Gizemli'];
+            const nouns = ['Kaplan', 'Kedi', 'Köpek', 'Ayı', 'Kuş'];
+            const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+            const username = randomAdjective + randomNoun + Math.floor(Math.random() * 100);
+            document.getElementById('username').innerText = `Rastgele Kullanıcı Adı: ${username}`;
+        }
+    </script>
+</body>
+</html>
